@@ -9,7 +9,7 @@ function Notification:Create(title, description, duration)
     Frame.Name = "NotificationFrame"
     Frame.Size = UDim2.new(0, 200, 0, 60)
     Frame.Position = UDim2.new(1, -220, 1, -70)
-    Frame.BackgroundColor3 = Color3.new(0, 0, 1)  -- Change background color to blue
+    Frame.BackgroundColor3 = Color3.new(0, 0, 1)  -- background color blue
     Frame.BorderSizePixel = 0
     Frame.Parent = ScreenGui
 
@@ -17,7 +17,7 @@ function Notification:Create(title, description, duration)
     TitleLabel.Name = "TitleLabel"
     TitleLabel.Text = title
     TitleLabel.TextSize = 14
-    TitleLabel.TextColor3 = Color3.new(0, 1, 1)  -- Change text color to cyan
+    TitleLabel.TextColor3 = Color3.new(0, 1, 1)  -- text color cyan
     TitleLabel.Position = UDim2.new(0, 10, 0, 5)
     TitleLabel.Size = UDim2.new(1, -20, 0, 15)
     TitleLabel.Font = Enum.Font.GothamSemibold
@@ -29,11 +29,11 @@ function Notification:Create(title, description, duration)
     DescriptionLabel.Text = description
     DescriptionLabel.TextSize = 12
     DescriptionLabel.TextWrapped = true
-    DescriptionLabel.TextColor3 = Color3.new(0, 1, 1)  -- Change text color to cyan
+    DescriptionLabel.TextColor3 = Color3.new(0, 1, 1)  -- text color cyan
     DescriptionLabel.Position = UDim2.new(0, 10, 0, 20)
     DescriptionLabel.Size = UDim2.new(1, -20, 0, 30)
     DescriptionLabel.Font = Enum.Font.Gotham
-    DescriptionLabel.BackgroundTransparency = 1  -- Set background transparency to fully transparent
+    DescriptionLabel.BackgroundTransparency = 1  -- background transparency fully transparent
     DescriptionLabel.Parent = Frame
 
     Frame:TweenPosition(UDim2.new(1, -220, 1, -70), "Out", "Quart", 1, true)
@@ -42,15 +42,14 @@ function Notification:Create(title, description, duration)
 
     Frame:TweenPosition(UDim2.new(1, 20, 1, -70), "In", "Quart", 1, true)  -- Smoothly move out the notification
 
-    wait(1)  -- Wait for the outro animation
+    wait(1)  -- Wait outro animation
 
     ScreenGui:Destroy()
 
-    wait(1)  -- Introduce a delay before creating a new notification
-
+    wait(1)  -- delay
     return ScreenGui
 end
 
--- Example usage:
-local newNotification = Notification:Create("Rasma Beta", "This is a cool notification!", 5)
--- You can create additional notifications using the returned ScreenGui instance
+-- Example
+local newNotification = Notification:Create("Rasma Beta", ".gg/wh76EfNzaN", 5)
+-- end of it
